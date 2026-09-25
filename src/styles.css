@@ -1,0 +1,125 @@
+:root {
+  --bg: #0f0620;
+  --bg-raised: #1b0e33;
+  --spotlight: #ffc857;
+  --p1: #ff3e7f;
+  --p1-dim: #3a0f21;
+  --p2: #2fd9c4;
+  --p2-dim: #0c2f2b;
+  --text: #f5f1ff;
+  --text-dim: #b9afd1;
+  --text-faint: #7a6f97;
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+button { font-family: inherit; border: none; background: none; color: inherit; cursor: pointer; }
+button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--spotlight); outline-offset: 2px; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); letter-spacing: 0.02em; font-weight: 400; }
+p { margin: 0; }
+
+/* ---------- Lobby ---------- */
+.lobby { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 24px 28px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.lobby-heading { text-align: center; }
+.lobby-heading h1 { font-size: 2.6rem; line-height: 1; }
+.lobby-heading h1 span { color: var(--spotlight); }
+.lobby-heading p { margin-top: 10px; color: var(--text-dim); font-size: 0.95rem; }
+.player-input { display: flex; flex-direction: column; gap: 6px; }
+.player-input label { font-size: 0.8rem; font-weight: 700; color: var(--text-faint); }
+.player-input input { font-family: var(--font-body); font-weight: 700; font-size: 1.1rem; color: var(--text); background: var(--bg-raised); border: 2px solid transparent; border-radius: 14px; padding: 14px 16px; width: 100%; }
+.player-input input:focus { outline: none; }
+.player-input.p1 input:focus { border-color: var(--p1); }
+.player-input.p2 input:focus { border-color: var(--p2); }
+.start-button { margin-top: 8px; background: var(--spotlight); color: #201400; font-weight: 800; font-size: 1.05rem; padding: 16px; border-radius: 16px; text-align: center; }
+.start-button:active { transform: scale(0.98); }
+
+/* ---------- Split court ---------- */
+.court { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+.half { flex: 1; position: relative; width: 100%; min-height: 0; }
+.half.top { transform: rotate(180deg); }
+
+.half-btn { all: unset; display: flex; width: 100%; height: 100%; box-sizing: border-box; }
+.half-inner { display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; transition: background 150ms ease; }
+
+.half.p1 .half-inner { background: var(--p1-dim); }
+.half.p2 .half-inner { background: var(--p2-dim); }
+.half.p1.won .half-inner { background: var(--p1); }
+.half.p2.won .half-inner { background: var(--p2); }
+.half.lost .half-inner { opacity: 0.3; }
+
+.half-word-area { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; padding: 8px 22px; min-height: 0; }
+.half-word { font-family: var(--font-display); font-size: clamp(2rem, 13vw, 3.2rem); color: var(--spotlight); text-align: center; word-break: break-word; }
+.half.won .half-word, .half.lost .half-word { opacity: 0.55; font-size: clamp(1.3rem, 7vw, 2rem); }
+
+.half-count { font-family: var(--font-display); font-size: clamp(4rem, 26vw, 7rem); color: var(--spotlight); }
+
+.half-hint { font-size: 0.78rem; color: rgba(245,241,255,0.6); margin-top: 4px; }
+.half-claimed-label { font-family: var(--font-display); font-size: clamp(1.3rem, 7vw, 2rem); }
+
+.half-score-row { flex-shrink: 0; display: flex; align-items: baseline; gap: 8px; padding: 10px 0 14px; font-weight: 800; }
+.half.p1 .half-score-row { color: var(--p1); }
+.half.p2 .half-score-row { color: var(--p2); }
+.half.won .half-score-row { color: rgba(0,0,0,0.55); }
+.half-score-row .sname { font-size: 0.8rem; font-weight: 700; opacity: 0.85; }
+.half-score-row .sval { font-family: var(--font-display); font-size: 1.4rem; }
+
+/* ---------- Net strip (shared HUD between the two halves) ---------- */
+.net {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: var(--bg);
+}
+.net::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background-image: repeating-linear-gradient(to right, rgba(245,241,255,0.25) 0 10px, transparent 10px 18px);
+}
+.net-round { position: relative; font-size: 0.8rem; font-weight: 700; color: var(--text-dim); flex: 1; text-align: center; }
+.net-icon { position: relative; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-dim); font-size: 1rem; flex-shrink: 0; }
+.net-icon:active { background: var(--bg-raised); }
+.net-judge { position: relative; display: flex; gap: 8px; }
+.net-judge button { padding: 10px 14px; border-radius: 12px; font-weight: 800; font-size: 0.85rem; }
+.net-judge .no-point { background: var(--bg-raised); color: var(--text-dim); }
+.net-judge .point { background: var(--spotlight); color: #201400; }
+.net-result { position: relative; display: flex; align-items: center; gap: 12px; }
+.net-result .result-text { font-size: 0.85rem; font-weight: 700; color: var(--text-dim); }
+.net-result .next-button { background: var(--spotlight); color: #201400; font-weight: 800; font-size: 0.9rem; padding: 10px 18px; border-radius: 12px; }
+
+/* ---------- Finished ---------- */
+.finished { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; padding: 24px 28px; text-align: center; }
+.finished .winner-label { color: var(--text-dim); font-size: 0.95rem; }
+.finished .winner-name { font-family: var(--font-display); font-size: 2.4rem; color: var(--spotlight); }
+.finished .final-scores { display: flex; gap: 24px; font-weight: 700; }
+.finished .final-scores .p1 { color: var(--p1); }
+.finished .final-scores .p2 { color: var(--p2); }
+.play-again-button { background: var(--spotlight); color: #201400; font-weight: 800; font-size: 1.05rem; padding: 16px 40px; border-radius: 16px; }
+.play-again-button:active { transform: scale(0.98); }

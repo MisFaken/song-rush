@@ -1,0 +1,167 @@
+{
+  "love": {
+    "num_occurrences": 1243,
+    "average_score": 0.731284,
+    "max_score": 0.998321,
+    "occurrences": [
+      { "id": "a83f91d2c47e1234", "artist": "The Weeknd", "title": "Blinding Lights", "score": 0.998321 },
+      { "id": "b91c22a1d8e4f567", "artist": "Whitney Houston", "title": "I Will Always Love You", "score": 0.97 },
+      { "id": "c1024ff8b3a29e01", "artist": "Nat King Cole", "title": "L-O-V-E", "score": 0.96 }
+    ]
+  },
+  "heart": {
+    "num_occurrences": 812,
+    "average_score": 0.68,
+    "max_score": 0.95,
+    "occurrences": [
+      { "id": "d7462b1f9a0c3e88", "artist": "Journey", "title": "Don't Stop Believin'", "score": 0.95 },
+      { "id": "e2938a0c1b4d5f77", "artist": "Total Eclipse of the Heart", "title": "Total Eclipse of the Heart", "score": 0.93 }
+    ]
+  },
+  "night": {
+    "num_occurrences": 940,
+    "average_score": 0.64,
+    "max_score": 0.92,
+    "occurrences": [
+      { "id": "f0192e3d4c5b6a99", "artist": "Bee Gees", "title": "Night Fever", "score": 0.92 },
+      { "id": "a1b2c3d4e5f60011", "artist": "Fun.", "title": "We Are Young", "score": 0.7 }
+    ]
+  },
+  "fire": {
+    "num_occurrences": 501,
+    "average_score": 0.62,
+    "max_score": 0.9,
+    "occurrences": [
+      { "id": "b2c3d4e5f6001122", "artist": "Adele", "title": "Set Fire to the Rain", "score": 0.9 },
+      { "id": "c3d4e5f600112233", "artist": "Kings of Leon", "title": "Sex on Fire", "score": 0.88 }
+    ]
+  },
+  "dance": {
+    "num_occurrences": 677,
+    "average_score": 0.6,
+    "max_score": 0.89,
+    "occurrences": [
+      { "id": "d4e5f60011223344", "artist": "Lady Gaga", "title": "Just Dance", "score": 0.89 },
+      { "id": "e5f6001122334455", "artist": "Bruno Mars", "title": "Treasure", "score": 0.55 }
+    ]
+  },
+  "rain": {
+    "num_occurrences": 388,
+    "average_score": 0.58,
+    "max_score": 0.86,
+    "occurrences": [
+      { "id": "f60011223344556a", "artist": "Rihanna", "title": "Umbrella", "score": 0.86 },
+      { "id": "0011223344556a7b", "artist": "Ace of Base", "title": "The Sign", "score": 0.4 }
+    ]
+  },
+  "home": {
+    "num_occurrences": 703,
+    "average_score": 0.63,
+    "max_score": 0.91,
+    "occurrences": [
+      { "id": "11223344556a7b8c", "artist": "Michael Bublé", "title": "Home", "score": 0.91 },
+      { "id": "223344556a7b8c9d", "artist": "Edward Sharpe", "title": "Home", "score": 0.85 }
+    ]
+  },
+  "money": {
+    "num_occurrences": 455,
+    "average_score": 0.55,
+    "max_score": 0.87,
+    "occurrences": [
+      { "id": "3344556a7b8c9d0e", "artist": "ABBA", "title": "Money, Money, Money", "score": 0.87 },
+      { "id": "44556a7b8c9d0e1f", "artist": "Pink Floyd", "title": "Money", "score": 0.8 }
+    ]
+  },
+  "eyes": {
+    "num_occurrences": 990,
+    "average_score": 0.65,
+    "max_score": 0.94,
+    "occurrences": [
+      { "id": "556a7b8c9d0e1f20", "artist": "Kylie Minogue", "title": "Can't Get You Out of My Head", "score": 0.6 },
+      { "id": "6a7b8c9d0e1f2031", "artist": "Bruno Mars", "title": "Just the Way You Are", "score": 0.94 }
+    ]
+  },
+  "baby": {
+    "num_occurrences": 1502,
+    "average_score": 0.72,
+    "max_score": 0.99,
+    "occurrences": [
+      { "id": "7b8c9d0e1f203142", "artist": "Justin Bieber", "title": "Baby", "score": 0.99 },
+      { "id": "8c9d0e1f20314253", "artist": "The Supremes", "title": "Baby Love", "score": 0.9 }
+    ]
+  },
+  "sun": {
+    "num_occurrences": 512,
+    "average_score": 0.57,
+    "max_score": 0.85,
+    "occurrences": [
+      { "id": "9d0e1f2031425364", "artist": "The Beatles", "title": "Here Comes the Sun", "score": 0.85 }
+    ]
+  },
+  "dream": {
+    "num_occurrences": 667,
+    "average_score": 0.6,
+    "max_score": 0.88,
+    "occurrences": [
+      { "id": "0e1f203142536475", "artist": "Aerosmith", "title": "Dream On", "score": 0.88 },
+      { "id": "1f20314253647586", "artist": "The Everly Brothers", "title": "All I Have to Do Is Dream", "score": 0.8 }
+    ]
+  },
+  "party": {
+    "num_occurrences": 340,
+    "average_score": 0.5,
+    "max_score": 0.82,
+    "occurrences": [
+      { "id": "2031425364758697", "artist": "Miley Cyrus", "title": "Party in the U.S.A.", "score": 0.82 }
+    ]
+  },
+  "gold": {
+    "num_occurrences": 210,
+    "average_score": 0.45,
+    "max_score": 0.78,
+    "occurrences": [
+      { "id": "31425364758697a8", "artist": "Spandau Ballet", "title": "Gold", "score": 0.78 }
+    ]
+  },
+  "sky": {
+    "num_occurrences": 430,
+    "average_score": 0.52,
+    "max_score": 0.83,
+    "occurrences": [
+      { "id": "425364758697a8b9", "artist": "The Score", "title": "Legend", "score": 0.6 },
+      { "id": "5364758697a8b9c0", "artist": "M.I.A.", "title": "Paper Planes", "score": 0.4 }
+    ]
+  },
+  "friend": {
+    "num_occurrences": 588,
+    "average_score": 0.56,
+    "max_score": 0.84,
+    "occurrences": [
+      { "id": "64758697a8b9c0d1", "artist": "The Beatles", "title": "With a Little Help from My Friends", "score": 0.84 }
+    ]
+  },
+  "world": {
+    "num_occurrences": 720,
+    "average_score": 0.61,
+    "max_score": 0.9,
+    "occurrences": [
+      { "id": "758697a8b9c0d1e2", "artist": "Louis Armstrong", "title": "What a Wonderful World", "score": 0.9 }
+    ]
+  },
+  "crazy": {
+    "num_occurrences": 399,
+    "average_score": 0.5,
+    "max_score": 0.8,
+    "occurrences": [
+      { "id": "8697a8b9c0d1e2f3", "artist": "Gnarls Barkley", "title": "Crazy", "score": 0.8 }
+    ]
+  },
+  "yesterday": {
+    "num_occurrences": 150,
+    "average_score": 0.4,
+    "max_score": 0.75,
+    "occurrences": [
+      { "id": "97a8b9c0d1e2f304", "artist": "The Beatles", "title": "Yesterday", "score": 0.75 }
+    ]
+  }
+}
